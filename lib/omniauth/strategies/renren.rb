@@ -22,9 +22,9 @@ module OmniAuth
           "tinyurl"=>raw_info["tinyurl"],
           "headurl"=>raw_info["headurl"],
           "mainurl"=>raw_info["mainurl"],
-          # "university_name"=>raw_info["university_history"]["name"],
-          # "university_year"=>raw_info["university_history"]["year"],
-          # "university_department"=>raw_info["university_history"]["department"],
+          "university_name"=>raw_info["university_history"]["name"],
+          "university_year"=>raw_info["university_history"]["year"],
+          "university_department"=>raw_info["university_history"]["department"],
           'urls' => {
             'Renren' => "http://www.renren.com/profile.do?id="+raw_info["uid"].to_s
           }
@@ -44,7 +44,7 @@ module OmniAuth
         params[:v] = '1.0'
         params[:uids] = session_key['user']['id']
         params[:session_key] = session_key['renren_token']['session_key']
-        params[:fields] = 'uid,name,sex,star,tinyurl,headurl,mainurl'
+        params[:fields] = 'uid,name,sex,star,tinyurl,headurl,mainurl,university_history'
         params[:sig] = Digest::MD5.hexdigest(params.map{|k,v| "#{k}=#{v}"}.sort.join + client.secret)
         params
       end
