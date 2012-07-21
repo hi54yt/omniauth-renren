@@ -22,9 +22,9 @@ module OmniAuth
           "tinyurl"=>raw_info["tinyurl"],
           "headurl"=>raw_info["headurl"],
           "mainurl"=>raw_info["mainurl"],
-          "university_name"=>raw_info.university_history.name,
-          "university_year"=>raw_info["university_history"]["year"],
-          "university_department"=>raw_info["university_history"]["department"],
+          "university_name"=>raw_info["university_history"][0]["name"],
+          "university_year"=>raw_info["university_history"][0]["year"],
+          "university_department"=>raw_info["university_history"][0]["department"],
           'urls' => {
             'Renren' => "http://www.renren.com/profile.do?id="+raw_info["uid"].to_s
           }
