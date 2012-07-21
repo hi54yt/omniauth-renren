@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "omniauth-renren/version"
 
 Gem::Specification.new do |s|
-  s.name        = "omniauth-renren"
+  s.name        = "omniauth-renren-hi54yt"
   s.version     = Omniauth::Renren::VERSION
   s.authors     = ["Scott Ballantyne"]
   s.email       = ["ussballantyne@gmail.com"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{an omniauth strategy for renren}
   s.description = %q{an omniauth strategy for renren}
 
-  s.rubyforge_project = "omniauth-renren"
+  s.rubyforge_project = "omniauth-renren-hi54yt"
   s.add_dependency 'omniauth', '~> 1.0.0.rc2'
   s.add_dependency 'omniauth-oauth2', '~> 1.0.0.rc2'
 
