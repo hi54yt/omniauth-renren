@@ -16,9 +16,15 @@ module OmniAuth
       info do
         {
           "uid" => raw_info["uid"], 
-          "gender"=> (raw_info["sex"] == 1 ? 'Male' : 'Female'), 
-          "image"=>raw_info["headurl"],
           'name' => raw_info['name'],
+          "sex"=> (raw_info["sex"] == 1 ? 'Male' : 'Female'), 
+          "star"=>raw_info["star"],
+          "tinyurl"=>raw_info["tinyurl"],
+          "headurl"=>raw_info["headurl"],
+          "mainurl"=>raw_info["mainurl"],
+          # "university_name"=>raw_info["university_history"]["name"],
+          # "university_year"=>raw_info["university_history"]["year"],
+          # "university_department"=>raw_info["university_history"]["department"],
           'urls' => {
             'Renren' => "http://www.renren.com/profile.do?id="+raw_info["uid"].to_s
           }
